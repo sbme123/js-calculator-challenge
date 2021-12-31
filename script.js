@@ -4,9 +4,19 @@ console.dir(resultOnScreen)
 
 // Select all buttons
 button = document.querySelectorAll(".button")
-button.value = button.innerText
 console.log(button)
 // convert button innerText to a value 
+
+// Event listener to pick up button values 
+
+button.forEach((button) => {
+    button.addEventListener('click', (eveny) => {
+        console.log(button.value)
+        resultOnScreen.innerHTML += button.value
+    })
+    
+});
+
 
 
 
