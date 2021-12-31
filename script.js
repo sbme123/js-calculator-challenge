@@ -1,5 +1,5 @@
 // Get the calculator result to store a new value
-let result = document.getElementById("result")
+let resultOnScreen = document.getElementById("result")
 
 // get the value of the buttons 
 buttons = document.querySelectorAll(".button")
@@ -13,24 +13,19 @@ let resultAnswer = ""
 
 for (item of buttons) {
     item.addEventListener("click", (event) => {
+        // getting the value of each button
         buttonValue = event.target.innerText
         console.log(`The value of this button is ${buttonValue}`)
-        result.innerHTML += buttonValue
-        
-        // if (buttonValue == "x") {
-        //     buttonValue = "*"
-        //     resultAnswer.innerHtml += buttonValue
-        //     result.innerHtml = resultAnswer
-        // }
+        result.innerText += buttonValue
+
+    // if statement to perform multiple calc operations starting with the delete button
+        if (buttonValue == "AC") {
+            result.innerText = ""
+        // } else if (buttonValue == "*") {
+        //     resultAnswer += buttonValue 
+        //     result.value = resultAnswer
+            // Using the JS eval function to calculate the resultAnswer varliable 
+        } 
     })
     
 }
-
-// if statement to use the button value for the calculations
-
-// if (buttonValue == "x") {
-//     buttonValue = "*"
-//     resultAnswer += buttonValue
-//     result.value - resultAnswer
-// }
-
