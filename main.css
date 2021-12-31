@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  background-color: red;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.calculator__container {
+  padding-top: 100px;
+  background-color: black;
+  height: 200px;
+}
+.calculator__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.calculator__grid-area {
+  grid-area: 5/1/6/3;
+}
