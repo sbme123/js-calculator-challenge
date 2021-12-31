@@ -54,7 +54,7 @@ main {
 }
 
 .calculator__result {
-  color: Arial, Helvetica, sans-serif;
+  color: #fff;
   text-align: right;
   padding: 20px 20px 20px 0;
   font-size: 20px;
