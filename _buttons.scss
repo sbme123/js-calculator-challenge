@@ -5,7 +5,7 @@
     height: 50px;
     border-radius: 30px;
     font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
     &__button-long {
         border: none;
@@ -13,21 +13,42 @@
         height: 50px;
         border-radius: 30px;
         font-size: 20px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        padding-left: 20px;
+        
     }
     
     &__manipulation {
+        background-color: $manipulation-background;
+        color: $manipulation-font;
 
-
+    }
+    
+    &__manipulation:hover {
+        background-color: $manipulation-hover;
     }
 
     &__operator {
+        background-color: $operator-background;
+        color: $operator-font;
 
+    }
+
+    &__operator:hover {
+        background-color: $operator-hover;
 
     }
 
     &_number {
+        background-color: $number-background;
+        color: $number-font;
 
+    }
 
+    &_number:hover {
+        background-color: $number-hover;
+       
+    
     }
 }
