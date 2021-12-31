@@ -64,6 +64,7 @@ main {
 .calculator__container {
   margin: 100px;
   background-color: black;
+  padding: 20px;
 }
 .calculator__grid {
   display: grid;
