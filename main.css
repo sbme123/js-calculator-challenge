@@ -49,12 +49,21 @@ main {
   text-align: center;
   justify-content: center;
   height: 100vh;
+  align-items: center;
+  align-content: center;
 }
 
+.calculator__result {
+  color: Arial, Helvetica, sans-serif;
+  text-align: right;
+  padding: 20px 20px 20px 0;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .calculator__container {
-  padding-top: 100px;
+  margin: 100px;
   background-color: black;
-  height: 200px;
 }
 .calculator__grid {
   display: grid;

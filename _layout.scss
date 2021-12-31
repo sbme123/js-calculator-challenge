@@ -8,17 +8,26 @@ main {
     text-align: center;
     justify-content: center;
     height: 100vh;
-    // align-items: center;
-    // align-content: center;
+    align-items: center;
+    align-content: center;
 
 }
 
 .calculator {
 
+    &__result {
+        color: $font;
+        text-align: right;
+        padding: 20px 20px 20px 0;
+        font-size: 20px;
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     &__container {
-        padding-top: 100px;
+        margin: 100px;
         background-color: black;
-        height: 200px
+        
     }
     
     &__grid {
