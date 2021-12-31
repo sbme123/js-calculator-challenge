@@ -1,6 +1,13 @@
-
+// Seleting the results id. 
 let resultOnScreen = document.getElementById("result")
 console.dir(resultOnScreen)
+
+// Select all buttons
+button = document.querySelectorAll(".button")
+button.value = button.innerText
+console.log(button)
+// convert button innerText to a value 
+
 
 
 
