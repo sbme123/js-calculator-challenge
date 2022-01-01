@@ -1,4 +1,4 @@
-/* Almost tearing my hear out trying to make if statements work. I've had much more success with a switch case. I struggled to find out how to */
+/* Almost tearing my hear out trying to make if statements work. I've had much more success with a switch case. */
 
 // resultsOnScreen will display the final calculation to the user. 
 const resultsOnScreen = document.getElementById("result-on-screen")
@@ -39,22 +39,22 @@ let checkButtonClicked = (buttonValue) => {
             result = eval(calculateSring)
             resultsOnScreen.innerHTML = result
             break;
-        
+        // AC button clears the resultsOnScreen
         case 'AC':
             buttonsClicked = ""
             result = ""
             resultsOnScreen.innerHTML = result
             break;
-
-            case '±':
-            let reverseNumber = buttonsClicked - buttonsClicked * 2
-            result = reverseNumber
+        // reverse the number from postive to negative. 
+        case '±':
+            let calculateReverseNumber = buttonsClicked - buttonsClicked * 2
+            result = calculateReverseNumber
             resultsOnScreen.innerHTML = result
             break;
-
-            case '%':
-            buttonsClicked = ""
-            result = ""
+        // Percetage buttons divides the number input by 100.
+        case '%':
+            let calculatePercentage = buttonsClicked / 100
+            result = calculatePercentage
             resultsOnScreen.innerHTML = result
             break;
 
