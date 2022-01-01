@@ -16,8 +16,10 @@ let calcButton = document.querySelectorAll("button")
 calcButton.forEach(button => {
     button.addEventListener("click", (event) => {
         const buttonValue = event.target.value
-        resultsOnScreen.innerHTML = buttonValue
-    
+        resultsOnScreen.innerHTML += buttonValue
+        console.log(`The button value is ${buttonValue}`)
+        // calling the checkButtonClicked function to run the below switch case. 
+        checkButtonClicked(buttonValue)
     })
     
 });
@@ -25,13 +27,24 @@ calcButton.forEach(button => {
 /* ---- NEXT ---- */ 
 
 // Switch case to check for the button values to append and then eval the results 
+// function to call that checks the value of the button and actions the switch statement. 
 
-switch(buttonValue) {
+let checkButtonClicked = (buttonValue) => {
 
-    default: 
-    buttonsClicked += buttonValue
+
+    switch(buttonValue) {
+
+        case 'AC':
+        buttonsClicked = ""
+        result = ""
+        resultsOnScreen.innerHTML = result
+        break;
+
+        default: 
+        buttonsClicked += buttonValue
+    }
+
 }
-
 
 
 
