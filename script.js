@@ -24,7 +24,7 @@ buttons.forEach(button => {
 // 4. May need to add some sort of regex functionality for the symbols. 
 // Create a variable for the symbol an check if it includes this within the calculation.  
 
-const OperatorButtonArr = ['AC', '±', '%', '÷', 'X', '-', '+', '='] 
+const operatorButtonArr = ['AC', '±', '%', '÷', 'X', '-', '+', '='] 
 
 
 // 5. Add an empty arrays that will changing depending on the user input 
@@ -56,8 +56,28 @@ const calculate = () => {
 for (button of calcButtons) {
     button.addEventListener("click", (event) => {
         const buttonValue = event.target.innerText
-        resultOnScreen.innerText += buttonValue
-        // Need to research how to seperate the symboles. 
+        
+        // Need to research how to seperate the operator buttons. 
+        // Mabye set up the operator buttons as it's own variable to seperate fomr the buttonValue
+        const operatorButtonValue = operatorButtonArr.includes(buttonValue)
+        // if the user types an opperator first then we'll need to convert the opperator button 
+        // to a first value. For example of the user his -1 to start. 
+        if (firstValue && operatorButtonValue) {
+            operatorButton = buttonValue
+        }  else if (!operatorButton) { 
+            firstValue += buttonValue
+        } else if (operatorButton) {
+            secondValue += buttonValue
+        }
+
+        if (buttonValue !== '=') {
+            resultOnScreen.innerHTML += buttonValue
+        }
+
+        if (buttonValue === "AC") {
+            resultOnScreen.innerHTML = ""
+        }
+        
     })
 }
 
