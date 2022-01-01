@@ -46,6 +46,18 @@ let checkButtonClicked = (buttonValue) => {
             resultsOnScreen.innerHTML = result
             break;
 
+            case '±':
+            let reverseNumber = buttonsClicked - buttonsClicked * 2
+            result = reverseNumber
+            resultsOnScreen.innerHTML = result
+            break;
+
+            case '%':
+            buttonsClicked = ""
+            result = ""
+            resultsOnScreen.innerHTML = result
+            break;
+
         default: 
             buttonsClicked += buttonValue
     }
