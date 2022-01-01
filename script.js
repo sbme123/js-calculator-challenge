@@ -33,15 +33,21 @@ let checkButtonClicked = (buttonValue) => {
 
 
     switch(buttonValue) {
-
+        // Used eval to calculate the string of button values 
+        case '=':
+            let calculateSring = buttonsClicked
+            result = eval(calculateSring)
+            resultsOnScreen.innerHTML = result
+            break;
+        
         case 'AC':
-        buttonsClicked = ""
-        result = ""
-        resultsOnScreen.innerHTML = result
-        break;
+            buttonsClicked = ""
+            result = ""
+            resultsOnScreen.innerHTML = result
+            break;
 
         default: 
-        buttonsClicked += buttonValue
+            buttonsClicked += buttonValue
     }
 
 }
