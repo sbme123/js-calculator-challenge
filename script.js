@@ -38,17 +38,20 @@ let result = ''
 // Let's try a simple sum caclulation 
 
 const calculate = () => {
+    // parseFloat to turn string into a number. 
     firstValue.parseFloat(firstValue)
     secondValue.parseFloat(secondValue)
 
+    // Plus calculation 
+
     if (buttonValue === '+') {
-        result = firstValue = secondValue
+        result = firstValue + secondValue
         resultOnScreen.innerHTML = result
+        firstValue = result 
+        secondValue = ''
     }
 
 }
-
-
 
 // 3. The resultOnScreen needs to change with the buttons, need to target the inner HTML of the resultOnScreen. 
 // This can be done by using a for loop with the event listener function 
@@ -63,7 +66,9 @@ for (button of calcButtons) {
         // if the user types an opperator first then we'll need to convert the opperator button 
         // to a first value. For example of the user his -1 to start. 
         if (firstValue && operatorButtonValue) {
+            secondValue && calculate()
             operatorButton = buttonValue
+
         }  else if (!operatorButton) { 
             firstValue += buttonValue
         } else if (operatorButton) {
