@@ -26,10 +26,12 @@ buttons.forEach(button => {
 
 for (button of calcButtons) {
     button.addEventListener("click", (event) => {
-        buttonValue = event.target.innerText
+        const buttonValue = event.target.innerText
         resultOnScreen.innerText += buttonValue
-        con
+        
     })
 }
+
+
 
 
